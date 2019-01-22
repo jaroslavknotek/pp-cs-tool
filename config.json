@@ -1,8 +1,0 @@
-{
-  "onedrive": {
-    "id": "client_id",
-    "secret": "client_secret"
-  },
-  "dir_path": "path_to_directory",
-  "archive_pass": "password"
-}

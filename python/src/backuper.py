@@ -2,6 +2,10 @@ import os
 import utils
 from shutil import copyfile
 
+import logging
+
+logger = logging.getLogger(__name__)
+
 
 def backup_locally(file_path, bck_dir_path=None):
     """
@@ -27,6 +31,7 @@ def backup_locally(file_path, bck_dir_path=None):
     new_file_name = "{}_{}{}".format(filename_no_ext, timestamp, ext)
     new_file_path = os.path.join(bck_dir_path, new_file_name)
 
+    logger.info('backing up data')
     copyfile(file_path, new_file_path)
 
 

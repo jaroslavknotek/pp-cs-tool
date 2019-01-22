@@ -1,6 +1,9 @@
 import os
 import pyminizip
 import utils
+import logging
+
+logger = logging.getLogger(__name__)
 
 
 def archive_files(dir_path, archive_name, password):
@@ -30,6 +33,7 @@ def archive_files(dir_path, archive_name, password):
     utils.ensure_dir(archive_dir)
     archive_path = os.path.join(archive_dir, archive_name)
 
+    logger.info('archiving files{}'.format(files_to_archive))
     pyminizip.compress_multiple(files_to_archive, file_prefixes, archive_path, password, 5)
     return archive_path
 
@@ -46,5 +50,6 @@ def extract(archive_path, password, target_path="."):
     :return:
         path where the archive was extracted
     """
+    logger.info('extracting data from {}'.format(archive_path))
     pyminizip.uncompress(archive_path, password, target_path, 0)
     return target_path

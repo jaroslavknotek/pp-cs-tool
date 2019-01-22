@@ -20,22 +20,6 @@ pipenv install
 
 ## Running
 
-Running requires config as an input parameter. It looks like this
-```json
-{
-	"onedrive": {
-		"id": "client_id",
-		"secret": "client_secret"
-	},
-	"dir_path": "path_to_directory",
-	"archive_pass": "password"
-}
-```
-
-```bash
-python main.py --config path_to_config
-```
-
 It takes a directory make an archive from it and publish it on onedrive
 
 ## Running the tests
@@ -45,6 +29,6 @@ python unittest
 ```
 
 
-## Acknowledment
+## Acknowledgments
 * Hat tip to anyone whose code was used
 
