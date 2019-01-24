@@ -1,6 +1,8 @@
 # pp-cs-tool
 
-Archives data and stored them to onedrive
+[Development stopped due to inconsistent requirements]
+
+Archives data and stored them to OneDrive
 
 ## Getting Started
 
